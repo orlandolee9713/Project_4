@@ -2,7 +2,8 @@
 //  COMPONENT
 // ============
 import React from 'react';
-import Form from './components/Form';
+import Form from './components/Form.js';
+import Recipes from './components/Recipes.js';
 // =================
 //  COMPONENT CLASS
 // =================
@@ -31,16 +32,12 @@ class App extends React.Component{
           <h1 className="Title">Let's Get Cooking</h1>
         </header>
         <Form getRecipes={this.getRecipes}/>
-        {this.state.recipes.map((recipe) => {
-          return (
-            <div>
-              <img src={recipe.image_url} alt="recipe_image"/>
-              <p key={recipe.source_url}>{recipe.title}</p>
-            </div>
-          )
-        })}
+        <Recipes recipes={this.state.recipes}/>
       </div>
     )
   }
 }
+// ===============
+// EXPORT
+// ===============
 export default App
