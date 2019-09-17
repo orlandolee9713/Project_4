@@ -19,11 +19,20 @@ class App extends React.Component{
   getRecipes = async (event) => {
     const recipeName = event.target.elements.recipeName.value;
     event.preventDefault();
-    const call_api = await fetch(`https://www.food2fork.com/api/search?key=${api_key}&q=${recipeName}&count=10`);
+    const call_api = await fetch(`https://www.food2fork.com/api/search?key=${api_key}&q=${recipeName}&count=12`);
 
     const results = await call_api.json();
     this.setState({ recipes: results.recipes})
     console.log(this.state.recipes);
+  }
+  componentDidMount = () => {
+    const json = localStorage.getItem("recipes");
+    const recipes = JSON.parse(json);
+    this.setState({recipes: recipes});
+  }
+  componentDidUpdate = () => {
+    const recipes = JSON.stringify(this.state.recipes);
+    localStorage.setItem("recipes", recipes)
   }
   render() {
     return(
