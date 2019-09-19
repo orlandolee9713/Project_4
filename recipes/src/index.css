@@ -9,21 +9,20 @@ h1{
 }
 input{
   width: 25%;
-  border: none;
   padding: 10px;
-  background-color: #C0DEFE;
-  margin-bottom: red;
+  background-color: rgba(0, 0, 0, 0.14);
+  border-radius: 5%;
 }
 input:hover{
   cursor: pointer;
-  color: white;
-  background: ##C0DEFE;
+  color: blue;
+  background: #C0DEFE;
 }
 header{
-  background-color: gray;
+  background-color: #40A5FF;
   color: white;
   height: 50px;
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 2px 2px 2px blue;
 }
 /* CLASSES */
 .row{
@@ -34,7 +33,11 @@ header{
 .box{
   padding: 5px;
   margin-bottom: 5px;
-
+  color: RGBA(0,0,255,0.57);
+  text-shadow: 2px 2px 2px rgba(0,0,255,0.24);
+}
+.subtitles{
+  color: black;
 }
 .box img{
   height: 220px;
@@ -48,14 +51,16 @@ header{
   width: 140px;
   font-weight: bold;
   font-size: 16px;
-  text-shadow: 2px 2px 2px gray;
+  text-shadow: 2px 2px 2px lightgray;
   color: blue;
+  border-radius: 5%;
 
 }
 .view {
   width: 75px;
   height: 40px;
-  background-color: whitesmoke;
+  background-color: lightgray;
+  border-color: gray;
   color: white;
   font-weight: bold;
   font-size: 14px;
