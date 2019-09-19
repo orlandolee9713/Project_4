@@ -38,7 +38,7 @@ class App extends React.Component{
     return(
       <div className="App">
         <header className="Header">
-          <h1 className="Title">Let's Get Cooking</h1>
+          <h1 className="Title">FindMeRecipe</h1>
         </header>
         <Form getRecipes={this.getRecipes}/>
         <Recipes recipes={this.state.recipes}/>
